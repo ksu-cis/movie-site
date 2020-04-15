@@ -4,4 +4,10 @@
     ViewData["Title"] = "Home page";
 }
 
-<h1>Hello World</h1>
+<h1>Movies</h1>
+<ul>
+    @foreach(Movie movie in MovieDatabase.All)
+    {
+        <li>@movie.Title</li>
+    }
+</ul>
