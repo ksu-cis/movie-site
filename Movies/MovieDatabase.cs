@@ -29,6 +29,6 @@ namespace Movies
         /// <summary>
         /// Gets all the movies in the database
         /// </summary>
-        public static List<Movie> All { get { return movies; } }
+        public static IEnumerable<Movie> All { get { return movies; } }
     }
 }
