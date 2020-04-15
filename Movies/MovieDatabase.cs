@@ -10,14 +10,14 @@ namespace Movies
     /// <summary>
     /// A class representing a database of movies
     /// </summary>
-    public class MovieDatabase
+    public static class MovieDatabase
     {
-        private List<Movie> movies = new List<Movie>();
+        private static List<Movie> movies = new List<Movie>();
 
         /// <summary>
         /// Loads the movie database from the JSON file
         /// </summary>
-        public MovieDatabase() {
+        static MovieDatabase() {
             
             using (StreamReader file = System.IO.File.OpenText("movies.json"))
             {
@@ -26,6 +26,9 @@ namespace Movies
             }
         }
 
-        public List<Movie> All { get { return movies; } }
+        /// <summary>
+        /// Gets all the movies in the database
+        /// </summary>
+        public static List<Movie> All { get { return movies; } }
     }
 }
